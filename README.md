@@ -4,14 +4,8 @@ Simple Qt support for Qt-based projects.
 
 ## Installation:
 
-Use your favourite package manager for Vim.
-
-If you don't have a preferred installation method, I recommend using Vim's
-native package management support, simply copy and paste:
-
-	mkdir -p ~/.vim/pack/bundle/start
-	cd ~/.vim/pack/bundle/start
-	git clone https://github.com/fedorenchik/qt-support.vim.git
+# vim-plug
+  Plug 'cpiger/vim-qt'
 
 ## Filetypes:
 
@@ -49,6 +43,8 @@ native package management support, simply copy and paste:
 * https://github.com/artoj/qmake-syntax-vim
 * https://github.com/suy/vim-qmake
 * https://bitbucket.org/JohnKaul/qbs.vim
+* https://github.com/tiamat18/vim-qmake
+* https://github.com/listenerri/vim-qt-assistant
 
 ## TODO:
 
