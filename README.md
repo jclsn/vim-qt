@@ -29,6 +29,22 @@ Simple Qt support for Qt-based projects.
 |    ui    |     **+** (xml)     |                  |                    |               |          |        |
 |    ts    |     **+** (xml)     |                  |                    |               |          |        |
 
+
+## vim-qt-assistant
+
+Search and display the document of the word under the current cursor in qt assistant.
+
+# Usage
+just call `GetDocFromAssistant()` function in vim.
+
+```
+:call GetDocFromAssistant()
+
+# or map a key to do this:
+
+map <F1> :call GetDocFromAssistant()<CR>
+```
+
 ## Related works:
 
 * https://github.com/vim-scripts/cpp.vim
@@ -59,22 +75,3 @@ Simple Qt support for Qt-based projects.
    (https://github.com/autozimu/LanguageClient-neovim or
    https://github.com/prabirshrestha/vim-lsp)
    
-
-## vim-qt-assistant
-
-Search and display the document of the word under the current cursor in qt assistant.
-
-# Installation
-
-Put `assistant.vim` under the `plugin` directory, or use a plugin manager(VimPlug)
-
-# Usage
-just call `GetDocFromAssistant()` function in vim.
-
-```
-:call GetDocFromAssistant()
-
-# or map a key to do this:
-
-map <F1> :call GetDocFromAssistant()<CR>
-```
