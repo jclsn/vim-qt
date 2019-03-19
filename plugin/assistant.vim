@@ -8,7 +8,8 @@ PROC = None
 
 def openAssistant():
     global PROC
-    PROC = subprocess.Popen(["assistant", "-enableRemoteControl"],\
+    assistant = vim.eval("g:vimqt_assisstant");
+    PROC = subprocess.Popen([assistant, "-enableRemoteControl"],\
             bufsize=1, stdin=subprocess.PIPE, stdout=subprocess.PIPE,\
             stderr=subprocess.PIPE, universal_newlines=True)
 
