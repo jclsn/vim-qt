@@ -46,6 +46,7 @@ git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
 
 * ``:QtAssist`` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
 The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
+* ``:QtDoc`` searches the word under the cursor in the Qt documentation in your browser.
 
 ## Related works:
 
@@ -67,7 +68,6 @@ The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
 ## Todo:
 
 * Add supported syntaxes to syntax menu
-* QtDoc
 
 ## Recommended Vim LSP clients for C++
 Vim:
