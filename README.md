@@ -1,13 +1,25 @@
-# Qt support for vim
+# Qt support for Vim
 
-Simple Qt support for Qt-based projects.
+Simple Qt support for Qt-based projects. Forked from https://github.com/cpiger/vim-qt.
 
-## Installation:
+## Installation
 
-# vim-plug
-  Plug 'cpiger/vim-qt'
+#### vim-plug
+```vim
+Plug 'jclsn/vim-qt'
+```
 
-## Filetypes:
+#### Vundle
+```vim
+Plugin 'jclsn/vim-qt'
+```
+
+#### Pathogen
+```vim
+git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
+```
+
+### Filetypes
 
 * C++
 * qmake
@@ -17,7 +29,7 @@ Simple Qt support for Qt-based projects.
 * ui -- xml
 * ts -- xml
 
-## Status:
+## Status
 
 | Language | File Type Detection | File Type Plugin |       Syntax       |     Indent    | Compiler | Plugin |
 | :------- | :-----------------: | :--------------: | :----------------: | :-----------: | :------: | :----: |
@@ -30,10 +42,10 @@ Simple Qt support for Qt-based projects.
 |    ts    |     **+** (xml)     |                  |                    |               |          |        |
 
 
-# Commands
+## Commands
 
-``:QtAssist `` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
-The path to Qt Assistant needs to be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'`` or a custom location.
+* ``:QtAssist`` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
+The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
 
 ## Related works:
 
@@ -52,16 +64,18 @@ The path to Qt Assistant needs to be provided as ``let g:vimqt_assistant = '/usr
 * https://github.com/tiamat18/vim-qmake
 * https://github.com/listenerri/vim-qt-assistant
 
-## TODO:
+## Todo:
 
-* Add supported syntaxes to Syntax menu
+* Add supported syntaxes to syntax menu
 * QtDoc
 
-## C++ Completion for Qt
+## Recommended Vim LSP clients for C++
+Vim:
+* https://github.com/neoclide/coc.nvim
+* https://github.com/ycm-core/YouCompleteMe
+* https://github.com/yeggapan/lsp
+* https://github.com/prabirshrestha/vim-lsp
 
-1. Generate compile_commands.json (for example: https://github.com/rizsotto/Bear)
-2. Set up LSP server (for example: https://github.com/cquery-project/cquery)
-3. Install & use LSP client for Vim
-   (https://github.com/autozimu/LanguageClient-neovim or
-   https://github.com/prabirshrestha/vim-lsp)
-   
+Neovim:
+* https://neovim.io/doc/user/lsp.html
+* https://github.com/neoclide/coc.nvim
