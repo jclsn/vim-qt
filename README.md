@@ -9,21 +9,24 @@ Forked from https://github.com/cpiger/vim-qt.
 ## Installation
 
 #### vim-plug
+
 ```vim
 Plug 'jclsn/vim-qt'
 ```
 
 #### Vundle
+
 ```vim
 Plugin 'jclsn/vim-qt'
 ```
 
 #### Pathogen
-```vim
+
+```sh
 git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
 ```
 
-### Filetypes
+## Filetypes
 
 * C++
 * qmake
@@ -44,7 +47,6 @@ git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
 |   qrc    |     **+** (xml)     |                  |                    |               |          |        |
 |    ui    |     **+** (xml)     |                  |                    |               |          |        |
 |    ts    |     **+** (xml)     |                  |                    |               |          |        |
-
 
 ## Commands
 
