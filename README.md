@@ -50,15 +50,27 @@ git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
 
 * ``:QtAssist`` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
     The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
-* ``:QtDoc`` searches the word under the cursor in the Qt documentation in your browser.
+* ``:QtDoc`` searches the word under the cursor in the Qt documentation in your browser. The default Qt version is defined with ``let g:qt_version = 'qt-6'``
 
 ## Recommended configuration
 
 ```vim
 let g:vimqt_assistant = '/usr/bin/assistant'
+let g:qt_version = 'qt-6'
 
 nnoremap <silent><leader>qa :QtAssist<CR>
 nnoremap <silent><leader>qd :QtDoc<CR>
+```
+
+## Custom command
+
+If the documentation for Qt6 and Qt5 is needed, there is a possibility to make
+a custom command and mappings as follows:
+
+```vim
+command Qt5Doc call QtOpenDocumentation('qt-5')
+nnoremap <silent><leader>q5 :call QtOpenDocumentation('qt-5')<CR>
+
 ```
 
 ## Recommended Vim LSP clients for C++
@@ -68,7 +80,7 @@ Vim:
 * https://github.com/yeggapan/lsp
 * https://github.com/prabirshrestha/vim-lsp
 
-Neovim:
+    Neovim:
 * https://neovim.io/doc/user/lsp.html
 * https://github.com/neoclide/coc.nvim
 

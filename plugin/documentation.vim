@@ -1,8 +1,8 @@
 vim9script
 
-def QtOpenDocumentation()
+def g:QtOpenDocumentation(qt_version: string = g:qt_version)
     var word = tolower(expand('<cword>'))
-    var url = 'https://doc.qt.io/qt-6/' .. word .. '.html'
+    var url = 'https://doc.qt.io/' .. qt_version .. '/' .. word .. '.html'
     silent! call system('xdg-open ' .. shellescape(url) .. ' &')
 enddef
 
