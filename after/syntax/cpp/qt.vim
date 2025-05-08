@@ -1,11 +1,3 @@
-" Vim syntax file
-" Language:	Qt-flavored C++
-" Current Maintainer:	Leonid V. Fedorenchik <leonid@fedorenchik.com>
-" Previous Maintainer:	vim-jp (https://github.com/vim-jp/vim-cpp)
-"			Ken Shan <ccshan@post.harvard.edu>
-" URL:	https://github.com/fedorenchik/qt-support.vim
-" Last Change:	2018 Jan 28
-
 " Qt Namespace
 syn keyword qtNamespace QAlgorithmsPrivate
 syn keyword qtNamespace QBinaryJson
