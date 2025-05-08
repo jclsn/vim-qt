@@ -1,32 +1,25 @@
-python3 << EOF
+vim9script 
 
-import subprocess
-import time
-import vim
+g:qt_assistant_job = v:none
 
-PROC = None
+def QtAssistantOpen(): void
+    var cmd = [g:vimqt_assistant, '-enableRemoteControl']
+    var job_options = {'in_io': 'pipe', 'out_io': 'pipe', 'err_io': 'pipe'}
+    g:qt_assistant_job = job_start(cmd, job_options)
+enddef
 
-def openAssistant():
-    global PROC
-    assistant = vim.eval("g:vimqt_assisstant");
-    PROC = subprocess.Popen([assistant, "-enableRemoteControl"],\
-            bufsize=1, stdin=subprocess.PIPE, stdout=subprocess.PIPE,\
-            stderr=subprocess.PIPE, universal_newlines=True)
+def QtAssistantSearch(): void
+    if typename(g:qt_assistant_job) != 'job' && g:qt_assistant_job == v:none
+        QtAssistantOpen()
+    elseif job_status(g:qt_assistant_job) !=# 'run'
+        QtAssistantOpen()
+    endif
 
-def searchIndex(keyword = None):
-    global PROC
-    if PROC is not None and PROC.poll() is None:
-        if keyword is None:
-            keyword = vim.eval("expand('<cword>')");
-        PROC.stdin.write("ActivateKeyword " + keyword + "\n")
-    else:
-        openAssistant()
-        time.sleep(2)
-        searchIndex(keyword)
+    var channel = job_getchannel(g:qt_assistant_job)
+    ch_logfile('./channel.log', 'w')
 
-#searchIndex(vim.eval("expand('<cword>')"))
-EOF
+    var keyword = expand('<cword>')
+    ch_sendraw(channel, 'ActivateKeyword ' .. keyword .. "\n")
+enddef
 
-function! GetDocFromAssistant()
-python3 searchIndex() 
-endfunction
+command QtAssist call QtAssistantSearch()

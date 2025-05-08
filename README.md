@@ -30,20 +30,10 @@ Simple Qt support for Qt-based projects.
 |    ts    |     **+** (xml)     |                  |                    |               |          |        |
 
 
-## vim-qt-assistant
+# Commands
 
-Search and display the document of the word under the current cursor in qt assistant.
-
-# Usage
-just call `GetDocFromAssistant()` function in vim.
-
-```
-:call GetDocFromAssistant()
-
-# or map a key to do this:
-
-map <F1> :call GetDocFromAssistant()<CR>
-```
+``:QtAssist `` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
+The path to Qt Assistant needs to be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'`` or a custom location.
 
 ## Related works:
 
