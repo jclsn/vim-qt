@@ -1,6 +1,10 @@
-# Qt support for Vim
+# vim-qt
 
-Simple Qt support for Qt-based projects. Forked from https://github.com/cpiger/vim-qt.
+Simple Qt support for Qt-based projects.
+
+The plugins adds syntax highlighting for various Qt classes and commands to quickly look up keywords in Qt Assistant or the online documentation.
+
+Forked from https://github.com/cpiger/vim-qt. 
 
 ## Installation
 
@@ -45,10 +49,30 @@ git clone https://github.com/jclsn/vim-qt ~/.vim/bundle/vim-qt
 ## Commands
 
 * ``:QtAssist`` searches the word under the cursor in [Qt Assistant](https://doc.qt.io/qt-6/assistant-quick-guide.html), if installed. 
-The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
+    The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
 * ``:QtDoc`` searches the word under the cursor in the Qt documentation in your browser.
 
-## Related works:
+## Recommended configuration
+
+```vim
+let g:vimqt_assistant = '/usr/bin/assistant'
+
+nnoremap <silent><leader>qa :QtAssist<CR>
+nnoremap <silent><leader>qd :QtDoc<CR>
+```
+
+## Recommended Vim LSP clients for C++
+Vim:
+* https://github.com/neoclide/coc.nvim
+* https://github.com/ycm-core/YouCompleteMe
+* https://github.com/yeggapan/lsp
+* https://github.com/prabirshrestha/vim-lsp
+
+Neovim:
+* https://neovim.io/doc/user/lsp.html
+* https://github.com/neoclide/coc.nvim
+
+## Similar plugins
 
 * https://github.com/vim-scripts/cpp.vim
 * https://github.com/Townk/vim-qt
@@ -65,17 +89,4 @@ The path must be provided as ``let g:vimqt_assistant = '/usr/bin/assistant'``.
 * https://github.com/tiamat18/vim-qmake
 * https://github.com/listenerri/vim-qt-assistant
 
-## Todo:
 
-* Add supported syntaxes to syntax menu
-
-## Recommended Vim LSP clients for C++
-Vim:
-* https://github.com/neoclide/coc.nvim
-* https://github.com/ycm-core/YouCompleteMe
-* https://github.com/yeggapan/lsp
-* https://github.com/prabirshrestha/vim-lsp
-
-Neovim:
-* https://neovim.io/doc/user/lsp.html
-* https://github.com/neoclide/coc.nvim
