@@ -31,7 +31,7 @@ syn region  qbsRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gim
 
 syn keyword qbsConditional	if else switch
 syn keyword qbsRepeat		while for do in
-" syn keyword qbsBranch		
+" syn keyword qbsBranch
 syn keyword qbsOperator		concat
 
 syn match qbsOperator           "\(\<[A-Z][a-zA-Z0-9_']*\.\)\=[-!#$%&\*\+<=>\?@\\^|~.][-!#$%&\*\+<=>\?@\\^|~:.]*"
@@ -45,7 +45,7 @@ syn keyword qbsType             Application
 "---[ B ]---------------------------------------------------------------
 syn keyword qbsType             bool
 "---[ C ]---------------------------------------------------------------
-syn keyword qbsType             CppAppliction
+syn keyword qbsType             CppApplication
 "---[ D ]---------------------------------------------------------------
 syn keyword qbsType             DynamicLibrary
 "---[ E ]---------------------------------------------------------------
@@ -74,19 +74,19 @@ syn keyword qbsType             var
 "---[ X ]---------------------------------------------------------------
 "---[ Z ]---------------------------------------------------------------
 
-syn keyword qbsStatement	return  break 
+syn keyword qbsStatement	return  break
 syn keyword qbsBoolean		true    false
 syn keyword qbsNull		null    undefined
 syn keyword qbsIdentifier	qbs     as
-" syn keyword qbsLabel		
-" syn keyword qbsException	
-" syn keyword qbsMessage		
-syn keyword qbsGlobal		Project         project         Product         FileTagger      SubProject      AutotestRunner  
+" syn keyword qbsLabel
+" syn keyword qbsException
+" syn keyword qbsMessage
+syn keyword qbsGlobal		Project         project         Product         FileTagger      SubProject      AutotestRunner
 syn keyword qbsGlobal		Properties      Depends         Application     Module          Rule            Artifact
 syn keyword qbsMember		filePath        environment     qbsSearchPaths
 syn keyword qbsMember	        type            condition       files   fileTags        name    files   references      enviroment
 syn keyword qbsMember	        patterns        overrideTags    id      inputs          auxiliaryInputs prepare
-"" syn keyword qbsDeprecated	
+"" syn keyword qbsDeprecated
 
 "---[ Reserved ]--------------------------------------------------------
 "---[ A ]---------------------------------------------------------------
@@ -182,7 +182,7 @@ if version >= 508 || !exists("did_qbs_syn_inits")
   HiLink qbsMessage		Keyword
   HiLink qbsGlobal		Keyword
   HiLink qbsMember		Keyword
-  HiLink qbsDeprecated		Exception 
+  HiLink qbsDeprecated		Exception
   HiLink qbsReserved		Keyword
   HiLink qbsDebug		Debug
   HiLink qbsConstant		Label

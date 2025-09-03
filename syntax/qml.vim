@@ -17,7 +17,7 @@ set cpo&vim
 
 syn case ignore
 
-syn cluster qmlExpr              contains=qmlStringD,qmlString,SqmlCharacter,qmlNumber,qmlObjectLiteralType,qmlBoolean,qmlType,qmlJsType,qmlNull,qmlGlobal,qmlFunction
+syn cluster qmlExpr             contains=qmlStringD,qmlString,SqmlCharacter,qmlNumber,qmlObjectLiteralType,qmlBoolean,qmlType,qmlJsType,qmlNull,qmlGlobal,qmlFunction
 syn keyword qmlCommentTodo      TODO FIXME XXX TBD contained
 syn match   qmlLineComment      "\/\/.*" contains=@Spell,qmlCommentTodo
 syn match   qmlCommentSkip      "^[ \t]*\*\($\|[ \t]\+\)"
@@ -39,18 +39,18 @@ syn keyword qmlConditional	if else switch
 syn keyword qmlRepeat		while for do in
 syn keyword qmlBranch		break continue
 syn keyword qmlOperator		new delete instanceof typeof
-syn keyword qmlJsType           Array Boolean Date Function Number Object String RegExp
-syn keyword qmlType              action alias bool color date double enumeration font int list point real rect size string time url variant vector3d
-syn keyword qmlStatement		return with
+syn keyword qmlJsType		Array Boolean Date Function Number Object String RegExp
+syn keyword qmlType		action alias bool color date double enumeration font int list point real rect size string time url variant vector3d
+syn keyword qmlStatement	return with
 syn keyword qmlBoolean		true false
 syn keyword qmlNull		null undefined
 syn keyword qmlIdentifier	arguments this var
 syn keyword qmlLabel		case default
-syn keyword qmlException		try catch finally throw
+syn keyword qmlException	try catch finally throw
 syn keyword qmlMessage		alert confirm prompt status
 syn keyword qmlGlobal		self
-syn keyword qmlDeclaration       property signal readonly
-syn keyword qmlReserved		abstract boolean byte char class const debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
+syn keyword qmlDeclaration	property signal readonly
+syn keyword qmlReserved		abstract boolean byte char class const debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile
 
 if exists("qml_fold")
     syn match	qmlFunction      "\<function\>"
@@ -62,9 +62,9 @@ if exists("qml_fold")
     setlocal foldmethod=syntax
     setlocal foldtext=getline(v:foldstart)
 else
-    syn keyword	qmlFunction      function
-    syn match	qmlBraces	   "[{}\[\]]"
-    syn match	qmlParens	   "[()]"
+    syn keyword	qmlFunction	function
+    syn match	qmlBraces	"[{}\[\]]"
+    syn match	qmlParens	"[()]"
 endif
 
 syn sync fromstart
@@ -84,8 +84,8 @@ if version >= 508 || !exists("did_qml_syn_inits")
   else
     command -nargs=+ HiLink hi def link <args>
   endif
-  HiLink qmlComment		Comment
   HiLink qmlLineComment		Comment
+  HiLink qmlComment		Comment
   HiLink qmlCommentTodo		Todo
   HiLink qmlSpecial		Special
   HiLink qmlStringS		String
@@ -96,16 +96,16 @@ if version >= 508 || !exists("did_qml_syn_inits")
   HiLink qmlRepeat		Repeat
   HiLink qmlBranch		Conditional
   HiLink qmlOperator		Operator
-  HiLink qmlJsType            Type
-  HiLink qmlType			Type
+  HiLink qmlJsType		Type
+  HiLink qmlType		Type
   HiLink qmlObjectLiteralType	Type
   HiLink qmlStatement		Statement
   HiLink qmlFunction		Function
   HiLink qmlBraces		Function
   HiLink qmlError		Error
-  HiLink qmlNull			Keyword
+  HiLink qmlNull		Keyword
   HiLink qmlBoolean		Boolean
-  HiLink qmlRegexpString		String
+  HiLink qmlRegexpString	String
 
   HiLink qmlIdentifier		Identifier
   HiLink qmlLabel		Label
@@ -118,7 +118,7 @@ if version >= 508 || !exists("did_qml_syn_inits")
   HiLink qmlNonBindingColon	NONE
   HiLink qmlBindingProperty	Label
   HiLink qmlIdProperty		Identifier
-  HiLink qmlDeclaration       Function
+  HiLink qmlDeclaration		Function
 
   delcommand HiLink
 endif

@@ -1,4 +1,4 @@
-vim9script 
+vim9script
 
 g:qt_assistant_job = v:none
 
