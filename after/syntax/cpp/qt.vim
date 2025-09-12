@@ -2351,6 +2351,7 @@ syn keyword qtClass QtHelpVersion
 syn keyword qtClass QtMath
 syn keyword qtClass QtMessageHandler
 syn keyword qtClass QtMsgHandler
+syn keyword qtClass QtMsgType
 syn keyword qtClass QtMultimedia
 syn keyword qtClass QtMultimediaDepends
 syn keyword qtClass QtMultimediaQuick_p
@@ -2828,7 +2829,7 @@ syn keyword qtType quintptr
 
 " Highlight
 highlight link qtNamespace cppConstant
-highlight link qtClass Type
+highlight link qtClass Structure
 highlight link qtMacro cDefine
 highlight link qtEnumType Type
 highlight link qtEnumValue cppConstant
