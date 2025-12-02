@@ -2829,7 +2829,7 @@ syn keyword qtType quintptr
 
 " Highlight
 highlight link qtNamespace cppConstant
-highlight link qtClass Structure
+highlight link qtClass Type
 highlight link qtMacro cDefine
 highlight link qtEnumType Type
 highlight link qtEnumValue cppConstant
